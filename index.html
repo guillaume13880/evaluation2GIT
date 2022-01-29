@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyGame</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="titre">
+        <h1>Jeu de Dé</h1>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <!--carte gauche-->
+        <div id="left">
+          <div id="titreJoueur1"><h2>PLAYER 1</h2></div>
+          <div class="globalPlayer">
+            <p><u>SCORE</u></p>
+            <p id="GLOBAL">0</p>
+          </div>
+          <div class="roundPlayer">
+            <p class="pRound">Point</p>
+            <div id="roundPlayer1">0</div>
+          </div>
+        </div>
+        <!--bouton regle du jeux-->
+        <button class="btnRegle modal-trigger">Régles du jeu</button>
+        <!--modal des regles -->
+        <div class="modalContain">
+          <div class="overlay modal-trigger"></div>
+          <div class="modal">
+            <button class="close-modal modal-trigger">X</button>
+            <h2>REGLES DU JEU</h2>
+            <p>Le jeu comprend 2 joueurs sur un seul et meme écran.</p>
+            <p>Chaque joueur possède un score temporaire et un score global.</p>
+            <p>À chaque tour les joueurs peuvent lancer plusieurs fois leur dé est sécuriser leur points.</p>
+            <p>Si le dé tombe sur le 1 ce sera alors au joueur suivant de jouer faite attention !</p>
+            <p>Cliquer sur Nouvelle partie pour démarrer le jeu !</p>
+            <p>Le premier joueur qui atteint les 100 points gagne le jeu !!</p>
+          </div>
+        </div>
+        <!--bouton nouvelle partie-->
+        <div id="btnNewGame">
+          <button>Nouvelle partie</button>
+        </div>
+        <!--images dés centrale-->
+        <div id="imagesDés">
+          <img src="img/face1.jpeg" id='images6Face' alt="image d'un dé">
+        </div>
+        <!--bouton de lancer et sécuriser-->
+        <div id="btnPlay">
+          <button id="btnLancer">Lancer</button>
+          <button id="btnSecuriser">Sécuriser</button>
+        </div>
+        <!--carte droite-->
+        <div id="right">
+          <div id="titreJoueur2"><h2>PLAYER 2</h2></div>
+          <div class="globalPlayer">
+             <p><u>SCORE</u></p>
+             <p id="GLOBAL2">0</p>
+          </div>
+          <div class="roundPlayer">
+            <p class="pRound">Point</p>
+            <div id="roundPlayer2">0</div>
+          </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
