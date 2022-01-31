@@ -45,7 +45,7 @@ newGame.addEventListener("click", function () {
     globalSecuriser2 = 0;
     scoreGlobal1.textContent = 0;
     globalSecuriser1 = 0;
-    //remet les points a 0
+    //remet les points a 0,
     compteurRound1 = 0;
     round1.textContent = compteurRound1;
     compteurRound2 = 0;
