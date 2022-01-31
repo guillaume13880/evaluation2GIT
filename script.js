@@ -40,10 +40,12 @@ function toggleModal() {
 //ecouteur nouvelle partie
 newGame.addEventListener("click", function () {
   if (globalSecuriser1 >= 1) {
+    //remet les scores  a  0
     scoreGlobal2.textContent = 0;
     globalSecuriser2 = 0;
     scoreGlobal1.textContent = 0;
     globalSecuriser1 = 0;
+    //remet les points a 0
     compteurRound1 = 0;
     round1.textContent = compteurRound1;
     compteurRound2 = 0;
@@ -52,10 +54,12 @@ newGame.addEventListener("click", function () {
     scoreGlobal1.style.color = "red";
   }
   if (globalSecuriser2 >= 1) {
+    //remet les scores a 0
     scoreGlobal2.textContent = 0;
     globalSecuriser2 = 0;
     scoreGlobal1.textContent = 0;
     globalSecuriser1 = 0;
+    //remet les points a 0
     compteurRound1 = 0;
     round1.textContent = compteurRound1;
     compteurRound2 = 0;
@@ -63,6 +67,7 @@ newGame.addEventListener("click", function () {
     titrePlayer1.style.border = "solid red 4px";
     scoreGlobal2.style.color = "red";
   }
+  //affiche le dé et les scores
   dés.style.opacity = "1";
   titrePlayer1.style.border = "solid red 4px";
   titrePlayer2.style.border = "solid black 2px";
@@ -76,7 +81,6 @@ const lancerDeDé = function () {
   const nombreDecimal = Math.random() * 6 + 1;
   //coupe de nombre en entier
   const nombre = Math.trunc(nombreDecimal);
-
   return nombre;
 };
 
