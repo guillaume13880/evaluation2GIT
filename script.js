@@ -28,6 +28,7 @@ let round2 = document.querySelector("#roundPlayer2");
 let winner = "WINNER";
 let loose = "LOOSE";
 
+//affichage modal regle
 modalTriggers.forEach((trigger) =>
   trigger.addEventListener("click", toggleModal)
 );
@@ -43,6 +44,10 @@ newGame.addEventListener("click", function () {
     globalSecuriser2 = 0;
     scoreGlobal1.textContent = 0;
     globalSecuriser1 = 0;
+    compteurRound1 = 0;
+    round1.textContent = compteurRound1;
+    compteurRound2 = 0;
+    round2.textContent = compteurRound2;
     titrePlayer1.style.border = "solid red 4px";
     scoreGlobal1.style.color = "red";
   }
@@ -51,6 +56,10 @@ newGame.addEventListener("click", function () {
     globalSecuriser2 = 0;
     scoreGlobal1.textContent = 0;
     globalSecuriser1 = 0;
+    compteurRound1 = 0;
+    round1.textContent = compteurRound1;
+    compteurRound2 = 0;
+    round2.textContent = compteurRound2;
     titrePlayer1.style.border = "solid red 4px";
     scoreGlobal2.style.color = "red";
   }
@@ -79,7 +88,6 @@ const clickSurBouton = function () {
   //rajoute l'attribut source avec le résultat
   image.src = "img/face" + resultat + ".jpeg";
 
-  //
   if (joueur == "player1") {
     if (resultat === 1) {
       joueur = "player2";
@@ -120,7 +128,7 @@ const clickSurBouton = function () {
 };
 
 const clickSurSecuriser = function () {
-  //secure le point player1
+  //secure les points player1
   if (joueur === "player1") {
     joueur = "player2";
     titrePlayer2.style.border = "solid red 4px";
@@ -137,10 +145,10 @@ const clickSurSecuriser = function () {
       scoreGlobal2.textContent = loose;
     }
   } else {
+    //secure les points player2
     joueur = "player1";
     titrePlayer2.style.border = "solid black 2px";
     titrePlayer1.style.border = "solid red 4px";
-    //secure les point player2
     globalSecuriser2 += compteurRound2;
     scoreGlobal2.textContent = globalSecuriser2;
     compteurRound2 = 0;
@@ -155,6 +163,7 @@ const clickSurSecuriser = function () {
   }
 };
 
-// execute le lancer de dé au click
+// ecoute le lancer de dé au click
 buttonLancer.addEventListener("click", clickSurBouton);
+//ecoute  le bouton securiser
 buttonSecuriser.addEventListener("click", clickSurSecuriser);
